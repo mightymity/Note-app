@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import moment from 'moment'
 
 class TableRow extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ class TableRow extends Component {
             {this.props.obj.title}
           </td>
           <td>
-            {this.props.obj.updatedAt}
+            {moment(this.props.obj.updatedAt).format('MMMM Do YYYY, h:mm:ss a')}
           </td>
           <td>
           <Link to={"/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
