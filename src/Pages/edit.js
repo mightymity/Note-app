@@ -58,7 +58,7 @@ export default class Edit extends Component {
                     </div>
                     <div className="form-group">
                         <label>Content</label>
-                        <input type="text" className = "form-control"value={this.state.content} onChange={this.onChangeContent}/>
+                        <textarea type="text" className = "form-control"value={this.state.content} onChange={this.onChangeContent}/>
                     </div>
                     <div className="form-group">
                         <input type="submit" value = "Update Note"className = "btn btn-primary"/>
